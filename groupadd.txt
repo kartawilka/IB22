@@ -1,0 +1,42 @@
+1.
+Sozdanie grupp
+ root@student:~# groupadd group1
+
+2. 
+Prosmotr inf o polzovatelyah
+root@student:~# vim /etc/passwd
+
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+...............................
+student:x:1000:1000:student:/home/student:/bin/bash
+lxd:x:999:100::/var/snap/lxd/common/lxd:/bin/false
+fwupd-refresh:x:113:118:fwupd-refresh user,,,:/run/systemd:/usr/sbin/nologin
+us1:x:1001:1004::/home/us1:/bin/bash
+us2:x:1002:1005::/home/us2:/bin/bash
+
+3.
+Prosmotr int. o gruppah
+root@student:~# vim /etc/group
+
+root:x:0:0:
+daemom:x:1:
+pin:x:2:
+sys:x:3::
+adm:x:4:syslog,student
+tty:x:5:
+...
+gr1:x:1001:
+gr2:x:1002:
+gr3:x:1003:
+gr4:x:1004:
+gr5:x:1005:
+gr6:x:1006:
+group1:x:1007:
+group2:x:1008:
+group3:x:1009:
+
+
